@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class MatrixTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class MatrixTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; MatrixTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">14</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.108s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">constructorOfCopyMatrix()</td>
+<td class="success">0.032s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">constructorOfEmptyMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">constructorOfSelfMadeMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">equalsMethod()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">fillRandomElemToMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">hashCodeMethod()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setElemToMatrix()</td>
+<td class="success">0.049s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">singleMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">supportTest()</td>
+<td class="success">0.007s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">takeColumOfMatrix()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">takeDimensionOfMatrix()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">takeElemOfMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">takeRowOfMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">transposeMatrix()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+--Test of set random elem into matrix--
+7 3 6 
+3 2 9 
+5 9 4 
+-----
+7 4 
+5 8 
+-----
+7 3 6 
+3 0 9 
+5 9 4 
+-----
+19 4 
+5 8 
+Matrix@f80d9 Matrix@f0a2d
+java.lang.RuntimeException: Row and colum index must be in bound of matrix
+
+--Test of support--
+Matrix@f8000 Immutable@ff820
+--Test of dimension--
+Columns : 3
+Rows : 3
+
+--Test of empty matrix--
+
+--Test of equals--
+2 9 6 
+3 6 6 
+1 3 6 
+-----
+2 9 6 
+3 6 6 
+1 3 6 
+Is equal: true
+-----
+7 0 5 
+6 3 0 
+7 9 5 
+Is equal: false
+
+--Test of taking Colum of matrix--
+2 4 9 
+2 6 5 
+0 6 5 
+Colum 0: 2 2 0 
+Colum -1: java.lang.ArrayIndexOutOfBoundsException: Colum index is incorrect
+
+--Test of taking elem of matrix--
+5 3 2 
+8 4 0 
+9 7 2 
+-----
+2 0 
+1 4 
+Matrix@f809b Matrix@f081e
+Elem[0;0]: 5
+Elem[1;1]: 4
+java.lang.ArrayIndexOutOfBoundsException: 4: Row and colum index must be in bound of matrix
+
+--Test of copy matrix--
+4 5 7 
+5 4 5 
+3 3 4 
+-----
+4 5 7 
+5 4 5 
+3 3 4 
+Matrix@f807c Matrix@f807c
+
+--Test of transpose--
+3 2 6 
+2 4 9 
+2 9 4 
+-----
+3 2 2 
+2 4 9 
+6 9 4 
+Matrix@f805d Matrix@f805d
+
+--Test of self-made matrix--
+Matrix@f8000
+java.lang.NegativeArraySizeException: Row or colum value cannot be less then 0
+java.lang.NegativeArraySizeException: Row or colum value cannot be less then 0
+
+--Test of taking Row of matrix--
+5 5 6 
+6 0 9 
+7 9 7 
+Row 0: 5 5 6 
+Row -1: java.lang.ArrayIndexOutOfBoundsException: -1: Row index is incorrect
+
+--Test of fill random elem into matrix--
+2 2 5 
+2 0 3 
+4 9 9 
+-----
+7 2 
+4 8 
+Matrix@f803e Matrix@f08b9
+
+--Test of hashCode--
+1 6 5 
+7 0 7 
+9 9 0 
+HashCode: 1015839
+-----
+1 6 5 
+7 0 7 
+9 9 0 
+HashCode: 1015839
+-----
+8 9 8 
+3 9 7 
+6 9 0 
+HashCode: 1016056
+-----
+4 3 2 
+7 8 3 
+9 1 8 
+HashCode: 1015932
+
+--Test of single matrix--
+1 0 0 
+0 1 0 
+0 0 1 
+java.lang.RuntimeException: Matrix should be square
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at 26 черв. 2023 1:01:12</p>
+</div>
+</div>
+</body>
+</html>

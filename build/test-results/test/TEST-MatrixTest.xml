@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MatrixTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2023-06-25T22:01:12" hostname="DESKTOP-07HMHSA" time="0.118">
+  <properties/>
+  <testcase name="setElemToMatrix()" classname="MatrixTest" time="0.049"/>
+  <testcase name="supportTest()" classname="MatrixTest" time="0.007"/>
+  <testcase name="takeDimensionOfMatrix()" classname="MatrixTest" time="0.002"/>
+  <testcase name="constructorOfEmptyMatrix()" classname="MatrixTest" time="0.001"/>
+  <testcase name="equalsMethod()" classname="MatrixTest" time="0.001"/>
+  <testcase name="takeColumOfMatrix()" classname="MatrixTest" time="0.002"/>
+  <testcase name="takeElemOfMatrix()" classname="MatrixTest" time="0.001"/>
+  <testcase name="constructorOfCopyMatrix()" classname="MatrixTest" time="0.032"/>
+  <testcase name="transposeMatrix()" classname="MatrixTest" time="0.003"/>
+  <testcase name="constructorOfSelfMadeMatrix()" classname="MatrixTest" time="0.001"/>
+  <testcase name="takeRowOfMatrix()" classname="MatrixTest" time="0.001"/>
+  <testcase name="fillRandomElemToMatrix()" classname="MatrixTest" time="0.001"/>
+  <testcase name="hashCodeMethod()" classname="MatrixTest" time="0.006"/>
+  <testcase name="singleMatrix()" classname="MatrixTest" time="0.001"/>
+  <system-out><![CDATA[
+--Test of set random elem into matrix--
+7 3 6 
+3 2 9 
+5 9 4 
+-----
+7 4 
+5 8 
+-----
+7 3 6 
+3 0 9 
+5 9 4 
+-----
+19 4 
+5 8 
+Matrix@f80d9 Matrix@f0a2d
+java.lang.RuntimeException: Row and colum index must be in bound of matrix
+
+--Test of support--
+Matrix@f8000 Immutable@ff820
+--Test of dimension--
+Columns : 3
+Rows : 3
+
+--Test of empty matrix--
+
+--Test of equals--
+2 9 6 
+3 6 6 
+1 3 6 
+-----
+2 9 6 
+3 6 6 
+1 3 6 
+Is equal: true
+-----
+7 0 5 
+6 3 0 
+7 9 5 
+Is equal: false
+
+--Test of taking Colum of matrix--
+2 4 9 
+2 6 5 
+0 6 5 
+Colum 0: 2 2 0 
+Colum -1: java.lang.ArrayIndexOutOfBoundsException: Colum index is incorrect
+
+--Test of taking elem of matrix--
+5 3 2 
+8 4 0 
+9 7 2 
+-----
+2 0 
+1 4 
+Matrix@f809b Matrix@f081e
+Elem[0;0]: 5
+Elem[1;1]: 4
+java.lang.ArrayIndexOutOfBoundsException: 4: Row and colum index must be in bound of matrix
+
+--Test of copy matrix--
+4 5 7 
+5 4 5 
+3 3 4 
+-----
+4 5 7 
+5 4 5 
+3 3 4 
+Matrix@f807c Matrix@f807c
+
+--Test of transpose--
+3 2 6 
+2 4 9 
+2 9 4 
+-----
+3 2 2 
+2 4 9 
+6 9 4 
+Matrix@f805d Matrix@f805d
+
+--Test of self-made matrix--
+Matrix@f8000
+java.lang.NegativeArraySizeException: Row or colum value cannot be less then 0
+java.lang.NegativeArraySizeException: Row or colum value cannot be less then 0
+
+--Test of taking Row of matrix--
+5 5 6 
+6 0 9 
+7 9 7 
+Row 0: 5 5 6 
+Row -1: java.lang.ArrayIndexOutOfBoundsException: -1: Row index is incorrect
+
+--Test of fill random elem into matrix--
+2 2 5 
+2 0 3 
+4 9 9 
+-----
+7 2 
+4 8 
+Matrix@f803e Matrix@f08b9
+
+--Test of hashCode--
+1 6 5 
+7 0 7 
+9 9 0 
+HashCode: 1015839
+-----
+1 6 5 
+7 0 7 
+9 9 0 
+HashCode: 1015839
+-----
+8 9 8 
+3 9 7 
+6 9 0 
+HashCode: 1016056
+-----
+4 3 2 
+7 8 3 
+9 1 8 
+HashCode: 1015932
+
+--Test of single matrix--
+1 0 0 
+0 1 0 
+0 0 1 
+java.lang.RuntimeException: Matrix should be square
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
