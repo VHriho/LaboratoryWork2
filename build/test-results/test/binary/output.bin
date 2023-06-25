@@ -1,138 +1,219 @@
 
-)--Test of set random elem into matrix--
-7 3 6 
-3 2 9 
-5 9 4 
------
-7 4 
-5 8 
------
-7 3 6 
-3 0 9 
-5 9 4 
------
-19 4 
-5 8 
-Matrix@f80d9 Matrix@f0a2d
-Ljava.lang.RuntimeException: Row and colum index must be in bound of matrix
+,--Test of set elem into Immutable matrix--
+0 0 
+9 4 
+----
+We set 1 in Row: 0 Colum: 0
+1 0 
+9 4 
+!Immutable@f07e0 Immutable@f07ff
+Ojava.lang.RuntimeException: Index of Row and Colum must be in bound of matrix
 
---Test of support--
-Matrix@f8000 Immutable@ff820
---Test of dimension--
-Columns : 3
-
-Rows : 3
+$--Test of empty Immutable matrix--
+
+--Test of equals--
+(Immutable@f07e0 Immutable@f07e0 : true
+)Immutable@f08d8 Immutable@f07e0 : false
 
---Test of empty matrix--
+#--Test of copy Immutable matrix--
 
---Test of equals--
-2 9 6 
-3 6 6 
-1 3 6 
------
-2 9 6 
-3 6 6 
-1 3 6 
-Is equal: true
------
-7 0 5 
-6 3 0 
-7 9 5 
-Is equal: false
+,--Test of taking Row of Immutable matrix--
+4 0 
+8 5 
+----
+4 0 
+Ejava.lang.ArrayIndexOutOfBoundsException: 3: Row index is incorrect
 
-$--Test of taking Colum of matrix--
-2 4 9 
-2 6 5 
-0 6 5 
-Colum 0: 2 2 0 
-NColum -1: java.lang.ArrayIndexOutOfBoundsException: Colum index is incorrect
+--Test of transpose--
+1 6 2 
+6 5 1 
+9 1 9 
+-----
+1 6 9 
+6 5 1 
+2 1 9 
 
-#--Test of taking elem of matrix--
-5 3 2 
-8 4 0 
-9 7 2 
------
-2 0 
-1 4 
-Matrix@f809b Matrix@f081e
-Elem[0;0]: 5
-Elem[1;1]: 4
-]java.lang.ArrayIndexOutOfBoundsException: 4: Row and colum index must be in bound of matrix
+--Test of single matrix--
+1 0 0 
+0 1 0 
+0 0 1 
+5java.lang.RuntimeException: Matrix should be square
 	
-	--Test of copy matrix--
-	4 5 7 
-	5 4 5 
-	3 3 4 
-	-----
-	4 5 7 
-	5 4 5 
-	3 3 4 
-	Matrix@f807c Matrix@f807c
+	---Test of taking elem of Immutable matrix--
+	1 1 
+	8 0 
+	----
+	1 1 
+	8 0 
+	Elem[0;0]: 1
+	Zjava.lang.ArrayIndexOutOfBoundsException: Row and colum index must be in bound of matrix
 
 
 
---Test of transpose--
+#--Test of copy Immutable matrix--
 
-3 2 6 
+2 8 
 
-2 4 9 
+5 7 
 
-2 9 4 
+----
 
------
+2 8 
 
-3 2 2 
-
-2 4 9 
-
-6 9 4 
-
-Matrix@f805d Matrix@f805d
+5 7 
 
---Test of self-made matrix--
-Matrix@f8000
-Pjava.lang.NegativeArraySizeException: Row or colum value cannot be less then 0
+(--Test of self-made Immutable matrix--
+Immutable@f07e0
 Pjava.lang.NegativeArraySizeException: Row or colum value cannot be less then 0
 
-"--Test of taking Row of matrix--
-5 5 6 
-6 0 9 
-7 9 7 
-Row 0: 5 5 6 
-NRow -1: java.lang.ArrayIndexOutOfBoundsException: -1: Row index is incorrect
-
-*--Test of fill random elem into matrix--
-2 2 5 
-2 0 3 
-4 9 9 
------
-7 2 
-4 8 
-Matrix@f803e Matrix@f08b9
+.--Test of taking Colum of Immutable matrix--
+0 7 
+3 1 
+----
+0 3 
+!Immutable@f07e0 Immutable@f07e0
+Djava.lang.ArrayIndexOutOfBoundsException: Colum index is incorrect
+--Test of dimension--
+0 0 
+0 0 
+----
+Columns : 2
+
+Rows : 2
 
 --Test of hashCode--
-1 6 5 
-7 0 7 
-9 9 0 
-HashCode: 1015839
------
-1 6 5 
-7 0 7 
-9 9 0 
-HashCode: 1015839
------
-8 9 8 
-3 9 7 
-6 9 0 
-HashCode: 1016056
------
-4 3 2 
-7 8 3 
-9 1 8 
-HashCode: 1015932
+1Immutable@f07e0 Immutable@f07e0 : 985056 985056
+1Immutable@f08f7 Immutable@f07e0 : 985335 985056
 
---Test of single matrix--
-1 0 0 
-0 1 0 
-0 0 1 
-5java.lang.RuntimeException: Matrix should be square
+4--Test of fill random elem into Immutable matrix--
+3 6 
+5 5 
+!Immutable@f07e0 Immutable@f083d
+
+)--Test of set random elem into matrix--
+1 3 7 
+8 1 5 
+2 2 1 
+-----
+9 7 
+5 6 
+-----
+1 3 7 
+8 0 5 
+2 2 1 
+-----
+19 7 
+5 6 
+Matrix@f801f Matrix@f0a2d
+Ljava.lang.RuntimeException: Row and colum index must be in bound of matrix
+
+--Test of support--
+Matrix@f8000 Immutable@ff820
+--Test of dimension--
+Columns : 3
+
+Rows : 3
+
+--Test of empty matrix--
+
+--Test of equals--
+5 3 2 
+1 6 9 
+4 1 4 
+-----
+5 3 2 
+1 6 9 
+4 1 4 
+Is equal: true
+-----
+6 1 6 
+8 4 9 
+6 3 5 
+Is equal: false
+
+$--Test of taking Colum of matrix--
+9 4 5 
+8 9 7 
+0 9 1 
+Colum 0: 9 8 0 
+NColum -1: java.lang.ArrayIndexOutOfBoundsException: Colum index is incorrect
+
+#--Test of taking elem of matrix--
+5 7 2 
+5 4 6 
+4 9 0 
+-----
+3 5 
+9 6 
+Matrix@f809b Matrix@f083d
+Elem[0;0]: 5
+Elem[1;1]: 6
+]java.lang.ArrayIndexOutOfBoundsException: 4: Row and colum index must be in bound of matrix
+
+--Test of copy matrix--
+4 1 5 
+2 9 2 
+1 8 1 
+-----
+4 1 5 
+2 9 2 
+1 8 1 
+Matrix@f807c Matrix@f807c
+
+--Test of transpose--
+0 2 1 
+8 1 2 
+8 3 2 
+-----
+0 8 8 
+2 1 3 
+1 2 2 
+Matrix@f8000 Matrix@f8000
+
+--Test of self-made matrix--
+Matrix@f8000
+Pjava.lang.NegativeArraySizeException: Row or colum value cannot be less then 0
+Pjava.lang.NegativeArraySizeException: Row or colum value cannot be less then 0
+
+"--Test of taking Row of matrix--
+2 3 1 
+5 9 8 
+8 6 1 
+Row 0: 2 3 1 
+NRow -1: java.lang.ArrayIndexOutOfBoundsException: -1: Row index is incorrect
+
+*--Test of fill random elem into matrix--
+7 8 3 
+7 5 6 
+0 5 8 
+-----
+7 5 
+9 6 
+Matrix@f80d9 Matrix@f08b9
+
+--Test of hashCode--
+1 7 9 
+8 8 1 
+4 7 2 
+HashCode: 1015839
+-----
+1 7 9 
+8 8 1 
+4 7 2 
+HashCode: 1015839
+-----
+2 4 1 
+2 4 7 
+4 4 2 
+HashCode: 1015870
+-----
+8 2 4 
+4 5 4 
+3 1 0 
+HashCode: 1016056
+
+--Test of single matrix--
+1 0 0 
+0 1 0 
+0 0 1 
+5java.lang.RuntimeException: Matrix should be square
