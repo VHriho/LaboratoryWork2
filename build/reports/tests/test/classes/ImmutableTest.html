@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class ImmutableTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class ImmutableTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; ImmutableTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">14</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.053s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">constructorCopyOfImmutableMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">constructorOfCopyMatrix()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">constructorOfEmptyImmutableMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">constructorOfSelfMadeImmutableMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">equalsMethod()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">fillRandomElemToImmutableMatrix()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">hashCodeMethod()</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setElemToImmutableMatrix()</td>
+<td class="success">0.038s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">singleImmutableMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">takeColumOfImmutableMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">takeDimensionOfImmutableMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">takeElemOfImmutableMatrix()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">takeRowOfImmutableMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">transposeImmutableMatrix()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>
+--Test of set elem into Immutable matrix--
+0 0 
+9 4 
+----
+We set 1 in Row: 0 Colum: 0
+1 0 
+9 4 
+Immutable@f07e0 Immutable@f07ff
+java.lang.RuntimeException: Index of Row and Colum must be in bound of matrix
+
+--Test of empty Immutable matrix--
+
+--Test of equals--
+Immutable@f07e0 Immutable@f07e0 : true
+Immutable@f08d8 Immutable@f07e0 : false
+
+--Test of copy Immutable matrix--
+
+--Test of taking Row of Immutable matrix--
+4 0 
+8 5 
+----
+4 0 
+java.lang.ArrayIndexOutOfBoundsException: 3: Row index is incorrect
+
+--Test of transpose--
+1 6 2 
+6 5 1 
+9 1 9 
+-----
+1 6 9 
+6 5 1 
+2 1 9 
+
+--Test of single matrix--
+1 0 0 
+0 1 0 
+0 0 1 
+java.lang.RuntimeException: Matrix should be square
+
+--Test of taking elem of Immutable matrix--
+1 1 
+8 0 
+----
+1 1 
+8 0 
+Elem[0;0]: 1
+java.lang.ArrayIndexOutOfBoundsException: Row and colum index must be in bound of matrix
+
+--Test of copy Immutable matrix--
+2 8 
+5 7 
+----
+2 8 
+5 7 
+
+--Test of self-made Immutable matrix--
+Immutable@f07e0
+java.lang.NegativeArraySizeException: Row or colum value cannot be less then 0
+
+--Test of taking Colum of Immutable matrix--
+0 7 
+3 1 
+----
+0 3 
+Immutable@f07e0 Immutable@f07e0
+java.lang.ArrayIndexOutOfBoundsException: Colum index is incorrect
+--Test of dimension--
+0 0 
+0 0 
+----
+Columns : 2
+Rows : 2
+
+--Test of hashCode--
+Immutable@f07e0 Immutable@f07e0 : 985056 985056
+Immutable@f08f7 Immutable@f07e0 : 985335 985056
+
+--Test of fill random elem into Immutable matrix--
+3 6 
+5 5 
+Immutable@f07e0 Immutable@f083d
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4</a> at 26 черв. 2023 1:12:06</p>
+</div>
+</div>
+</body>
+</html>
